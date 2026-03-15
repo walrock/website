@@ -369,10 +369,54 @@ textarea:focus-visible {
 }
 
 .hero-actions {
-  display: flex;
+  display: inline-flex;
   gap: 12px;
   flex-wrap: wrap;
-  margin-top: 10px;
+  align-items: center;
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 24px;
+  border: 1px solid rgba(243, 241, 234, 0.18);
+  background: linear-gradient(
+    135deg,
+    rgba(30, 43, 44, 0.18),
+    rgba(47, 111, 115, 0.14)
+  );
+  box-shadow: 0 18px 34px rgba(30, 43, 44, 0.18);
+  backdrop-filter: blur(10px);
+}
+
+.hero-actions .btn {
+  min-width: 210px;
+  box-shadow: var(--shadow2);
+}
+
+.hero-actions .btn-primary {
+  background: linear-gradient(
+    135deg,
+    rgba(127, 191, 194, 0.4),
+    rgba(47, 111, 115, 0.3)
+  );
+  border-color: rgba(243, 241, 234, 0.18);
+  color: rgba(247, 248, 246, 0.98);
+}
+
+.hero-actions .btn-primary:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(127, 191, 194, 0.5),
+    rgba(47, 111, 115, 0.36)
+  );
+}
+
+.hero-actions .btn-ghost {
+  background: rgba(243, 241, 234, 0.12);
+  border-color: rgba(243, 241, 234, 0.24);
+  color: rgba(247, 248, 246, 0.98);
+}
+
+.hero-actions .btn-ghost:hover {
+  background: rgba(243, 241, 234, 0.2);
 }
 
 .hero-badges {
@@ -537,6 +581,41 @@ textarea:focus-visible {
   line-height: 1.35;
 }
 
+#services {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+#services::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 240px;
+  background-image: url("./img/paint-drip-gold.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  opacity: 0.72;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#services .container {
+  position: relative;
+  z-index: 1;
+}
+
+#services .section-head {
+  padding-top: 54px;
+}
+
+#services .service-grid,
+#services .service-cta {
+  position: relative;
+  z-index: 1;
+}
 /* Services */
 .service-grid {
   display: grid;
@@ -1122,6 +1201,25 @@ textarea:focus-visible {
 }
 
 @media (max-width: 520px) {
+  #services::before {
+    height: 170px;
+    opacity: 0.64;
+  }
+
+  #services .section-head {
+    padding-top: 32px;
+  }
+
+  .hero-actions {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    min-width: 0;
+  }
+
   .footer {
     padding-top: 22px;
   }
@@ -1226,6 +1324,9 @@ textarea:focus-visible {
   border-color: rgba(47, 111, 115, 0.28);
   box-shadow: var(--shadow2);
 }
+
+
+
 
 
 
