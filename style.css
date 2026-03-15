@@ -955,95 +955,105 @@ textarea:focus-visible {
   display: block;
 }
 
-/* Contact */
-.contact-card {
+/* Footer */
+.footer {
+  padding: 28px 0 20px;
+  border-top: 1px solid var(--line);
+  background: rgba(243, 241, 234, 0.68);
+}
+
+.footer-stack {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 14px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--r-xl);
-  padding: 18px;
+  gap: 18px;
+}
+
+.footer-contact-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  padding: 20px;
+  border-radius: 28px;
+  border: 1px solid rgba(47, 111, 115, 0.16);
+  background:
+    radial-gradient(circle at top right, rgba(47, 111, 115, 0.12), transparent 36%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(231, 239, 234, 0.92));
   box-shadow: var(--shadow);
 }
 
-.contact-actions {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin: 14px 0 6px;
-}
-
-.contact-side {
-  display: grid;
-  gap: 10px;
-}
-
-.mini {
-  padding: 14px;
-  border-radius: var(--r-lg);
-  border: 1px solid var(--line);
-  background: rgba(243, 241, 234, 0.65);
-}
-
-.mini-title {
+.footer-kicker {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 12px;
   font-weight: 900;
-  margin-bottom: 6px;
-}
-.mini-text {
-  color: rgba(30, 43, 44, 0.72);
-}
-
-.note {
-  margin-top: 12px;
-  padding: 12px 14px;
-  border-radius: var(--r-xl);
-  border: 1px solid var(--line);
-  background: rgba(231, 239, 234, 0.55);
-  color: rgba(30, 43, 44, 0.8);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(47, 111, 115, 0.78);
 }
 
-/* Contact form */
-.lead-form {
+.footer-title {
+  margin: 0;
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 0.96;
+}
+
+.footer-text {
+  max-width: 640px;
+  margin: 10px 0 0;
+}
+
+.footer-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: 22px;
+  text-decoration: none;
+  color: #ffffff;
+  background: linear-gradient(135deg, #1faa59, #118943);
+  box-shadow: 0 20px 32px rgba(17, 137, 67, 0.22);
+}
+
+.footer-whatsapp:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 24px 36px rgba(17, 137, 67, 0.28);
+}
+
+.footer-whatsapp-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.footer-whatsapp-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+
+.footer-whatsapp-copy {
   display: grid;
-  gap: 10px;
-  margin-top: 12px;
+  gap: 3px;
 }
 
-.field {
-  display: grid;
-  gap: 6px;
-  font-size: 13px;
+.footer-whatsapp-label {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.88;
+}
+
+.footer-whatsapp-number {
+  font-size: 22px;
   font-weight: 900;
-  color: rgba(30, 43, 44, 0.78);
+  line-height: 1;
 }
-
-.field input,
-.field select,
-.field textarea {
-  width: 100%;
-  padding: 12px;
-  border-radius: 16px;
-  border: 1px solid var(--line);
-  background: rgba(243, 241, 234, 0.72);
-  color: rgba(30, 43, 44, 0.92);
-  font: inherit;
-  font-weight: 700;
-  outline: none;
-}
-
-.field textarea {
-  resize: vertical;
-  min-height: 88px;
-}
-
-.field input:focus,
-.field select:focus,
-.field textarea:focus {
-  border-color: rgba(47, 111, 115, 0.45);
-  box-shadow: 0 0 0 4px rgba(47, 111, 115, 0.12);
-}
-
 /* Footer */
 .footer {
   padding: 20px 0;
@@ -1101,12 +1111,46 @@ textarea:focus-visible {
     align-items: flex-start;
   }
 
-  .contact-card {
+  .footer-contact-card {
     grid-template-columns: 1fr;
+  }
+
+  .footer-whatsapp {
+    width: 100%;
+    justify-content: center;
   }
 }
 
 @media (max-width: 520px) {
+  .footer {
+    padding-top: 22px;
+  }
+
+  .footer-contact-card {
+    padding: 18px;
+    border-radius: 24px;
+  }
+
+  .footer-title {
+    font-size: 30px;
+  }
+
+  .footer-whatsapp {
+    width: 100%;
+    padding: 13px 14px;
+    justify-content: flex-start;
+  }
+
+  .footer-whatsapp-number {
+    font-size: 18px;
+  }
+
+  .footer-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
   .peek {
     margin-top: -22px;
   }
@@ -1182,4 +1226,6 @@ textarea:focus-visible {
   border-color: rgba(47, 111, 115, 0.28);
   box-shadow: var(--shadow2);
 }
+
+
 
