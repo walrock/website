@@ -781,50 +781,6 @@ textarea:focus-visible {
   filter: contrast(1.03);
 }
 
-.shot-body {
-  display: grid;
-  gap: 8px;
-  padding: 14px 14px 16px;
-}
-
-.shot-meta {
-  margin: 0;
-  color: rgba(47, 111, 115, 0.86);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.shot-title {
-  margin: 0;
-  font-family: "DM Serif Display", serif;
-  font-size: 22px;
-  line-height: 1.05;
-}
-
-.shot-text {
-  margin: 0;
-  color: rgba(30, 43, 44, 0.8);
-  font-size: 14px;
-}
-
-.shot-link {
-  width: fit-content;
-  color: var(--sea);
-  font-weight: 800;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(47, 111, 115, 0.24);
-  transition:
-    color 0.18s ease,
-    border-color 0.18s ease;
-}
-
-.shot-link:hover {
-  color: var(--accent);
-  border-color: rgba(199, 123, 90, 0.34);
-}
-
 /* Lightbox */
 .lightbox {
   position: fixed;
