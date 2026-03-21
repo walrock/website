@@ -1,4 +1,4 @@
-const test = require("node:test");
+﻿const test = require("node:test");
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
@@ -25,7 +25,7 @@ test("core sections and controls exist", () => {
     "gallery",
     "galleryGrid",
     "contact",
-    "leadForm",
+    "estimate",
     "lightbox",
     "lightboxImg",
     "lightboxCount",
@@ -108,3 +108,4 @@ test("script.js passes syntax check", () => {
     "script.js has syntax errors"
   );
 });
+
